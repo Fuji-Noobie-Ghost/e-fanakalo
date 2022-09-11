@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express'
 import helmet from 'helmet'
 import compression from 'compression'
+import cors from 'cors'
 
 const app = express()
 
@@ -10,6 +11,9 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use(compression())
 app.use(helmet())
+app.use(cors({
+    origin: '*'
+}))
 
 app.use('/uploads', express.static('/uploads'))
 
