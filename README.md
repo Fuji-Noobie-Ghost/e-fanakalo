@@ -16,7 +16,10 @@
     npm install
     npm run migration:run # Create all Tables
     ```
-
+* Create a directory 'uploads' in the project root
+    ```bash
+    mkdir uploads
+    ```
 * Finally, you can run the API with the following command
    ```bash
     npm start
