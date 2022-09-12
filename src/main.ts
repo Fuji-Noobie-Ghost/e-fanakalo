@@ -23,7 +23,7 @@ async function Server() {
     // Create an uploader
     const uploader = createUploader({
         storage: createStorage(resolve(__dirname, '../uploads')),
-        accepts: ['.png', '.jpg', '.jpeg'],
+        accepts: ['.png', '.jpg', '.jpeg', '.PNG', '.JPG', '.JPEG'],
         maxCount: +MAX_FILE_COUNT,
         maxSize: +MAX_FILE_SIZE
     })
