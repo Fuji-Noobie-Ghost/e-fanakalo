@@ -35,7 +35,9 @@ export class AppMiddleware {
             })
 
         const order = []
-        order[req.query.sort as string] = 'DESC'
+        if (req.query.sort as string === 'createdAt' || req.query.sort as string === 'updatedAt')
+            order[req.query.sort as string] = 'DESC'
+        else order[req.query.sort as string] = 'ASC'
         req.query.order = order
 
         return next()
