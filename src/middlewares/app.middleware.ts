@@ -28,7 +28,7 @@ export class AppMiddleware {
         if (sort === undefined) req.query.sort = 'updatedAt'
 
         if (parseInt(page as string) === NaN || parseInt(per_page as string) === NaN ||
-        sortAccepts.includes(sort as string) || req.query.status === null)
+        !sortAccepts.includes(sort as string) || req.query.status === null)
             return res.status(400).json({
                 statusCode: 400,
                 message: 'Invalid Query Request'
