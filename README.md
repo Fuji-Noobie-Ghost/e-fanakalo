@@ -9,7 +9,10 @@
     CREATE DATABASE <your_database_name>;
     ```
 
-* Edit .env files in your project root according to your environment
+* Create and edit .env files in your project root according to your environment
+    ```bash
+    cp .env.example .env
+    ```
     
 * In your terminal, run the following command
     ```bash
